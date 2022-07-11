@@ -18,7 +18,7 @@ public class d6Script : MonoBehaviour
 
         if (Input.GetKeyDown (KeyCode.Space))
         {
-            DiceNumberTextScript.diceNumber = 0;
+            //DiceNumberTextScript.diceNumber = 0;
             float dirX = Random.Range(0, 500);
         }
     }
