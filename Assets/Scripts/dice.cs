@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class dice : MonoBehaviour
+public class Dice : MonoBehaviour
 {
     public int selectedResult;
     public int selectedVector;
