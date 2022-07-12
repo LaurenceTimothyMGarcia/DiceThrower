@@ -25,7 +25,7 @@ public class Dice : MonoBehaviour
             var worldSpaceValueVector = this.transform.localToWorldMatrix.MultiplyVector(valueVector);
             float dot = Vector3.Dot(worldSpaceValueVector, Vector3.up);
 
-            if (dot > bestDot)
+            if (dot != bestDot)
             {
                 bestDot = dot;
                 selectedVector = i;

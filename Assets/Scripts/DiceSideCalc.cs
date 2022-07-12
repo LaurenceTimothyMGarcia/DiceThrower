@@ -38,4 +38,15 @@ public class DiceSideCalc : MonoBehaviour
     {
         
     }
+
+    void OnDrawGizmos()
+    {
+        Gizmos.color = Color.red;
+
+        foreach(var valueVector in diceNormals)
+        {
+            var worldSpaceValueVector = this.transform.localToWorldMatrix.MultiplyVector(valueVector);
+            Gizmos.DrawLine(this.transform.position, this.transform.position + worldSpaceValueVector);
+        }
+    }
 }

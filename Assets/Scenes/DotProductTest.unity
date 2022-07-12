@@ -436,7 +436,7 @@ GameObject:
   - component: {fileID: 1587545475084008789}
   - component: {fileID: 8164078559669138355}
   - component: {fileID: 8164078559669138354}
-  - component: {fileID: 8164078559669138353}
+  - component: {fileID: 8164078559669138356}
   m_Layer: 0
   m_Name: StandardD6
   m_TagString: Untagged
@@ -444,19 +444,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &8164078559669138353
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8164078559669138352}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 00437c2d170eab742a27d12452447ad3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  diceNormals: []
 --- !u!54 &8164078559669138354
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -486,3 +473,16 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 2, y: 2.0000002, z: 2}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &8164078559669138356
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8164078559669138352}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 00437c2d170eab742a27d12452447ad3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  diceNormals: []
