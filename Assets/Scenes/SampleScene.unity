@@ -578,8 +578,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8164078558546467157}
-  m_LocalRotation: {x: 0.32779253, y: 0.4799841, z: -0.40696752, w: 0.7046594}
-  m_LocalPosition: {x: 0, y: 8.47, z: 0}
+  m_LocalRotation: {x: 0.32779256, y: 0.4799841, z: -0.4069675, w: 0.7046594}
+  m_LocalPosition: {x: 0, y: 7.2531147, z: -1.990902}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -712,6 +712,7 @@ GameObject:
   - component: {fileID: 1587545473971165104}
   - component: {fileID: 8164078558546467158}
   - component: {fileID: 8164078558546467159}
+  - component: {fileID: 8164078558546467161}
   - component: {fileID: 8164078558546467160}
   m_Layer: 0
   m_Name: StandardD6
@@ -758,6 +759,20 @@ MonoBehaviour:
   m_GameObject: {fileID: 8164078558546467157}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2e03d569488acb44f816e7acd36e6a8a, type: 3}
+  m_Script: {fileID: 11500000, guid: 5107225d6657d284aa999d2444933833, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  diceVelocity: {x: 0, y: 0, z: 0}
+--- !u!114 &8164078558546467161
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8164078558546467157}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 81127a71ed269ec4492057de061b1bd3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  offsetCamera: 10
