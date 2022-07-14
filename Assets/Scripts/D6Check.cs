@@ -7,6 +7,7 @@ public class D6Check : MonoBehaviour
     Rigidbody rb;
     public Vector3 diceVelocity;
 
+    public Transform[] diceSides;
 
     // Start is called before the first frame update
     void Start()
