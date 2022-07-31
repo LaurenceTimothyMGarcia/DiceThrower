@@ -10,6 +10,7 @@ public class DiceThrow : MonoBehaviour
     public static Vector3 diceVelocity;
 
     [SerializeField] int offsetCamera = 500;
+    [SerializeField] float followSpeed;
 
     [HideInInspector] public bool hasFallen = false;  //Checks if the object as fallen
 
@@ -39,28 +40,28 @@ public class DiceThrow : MonoBehaviour
 
             //Rotates dice / issue with dice rotation too fast
             euler.x = Random.Range(0, 360f);
-            //euler.y = Random.Range(0f, 360f);
             euler.z = Random.Range(0, 360f);
             transform.eulerAngles = euler;
         }
-
-        //user can click on die to move it and shake it
-        if (Input.GetKeyDown(KeyCode.Mouse0))
-        {
-            isGrabbed = true;   //Stops from rotating
-
-            //Place move and shake script here
-            transform.position = Camera.main.ScreenToWorldPoint(new Vector3(mousePos.x, mousePos.y, offsetCamera)); //So far only goes to where the mouse is, doesnt continously travel
-        }
-
-        //Once user lets go throw dice
-        if (Input.GetKeyUp(KeyCode.Mouse0))
-        {
-            rb.useGravity = true;
-            hasFallen = true;
-        }
-
-        //dice stops moving and determines number 
-        //Have determine Number another script
     }
+
+    //user can click on die to move it and shake it
+    void OnMouseDown()
+    {
+        isGrabbed = true;   //Stops from rotating
+    }
+
+    void OnMouseDrag()
+    {
+        transform.position = Vector3.Lerp(transform.position, Camera.main.ScreenToWorldPoint(new Vector3(mousePos.x, mousePos.y, offsetCamera)), followSpeed/100);
+    }
+
+    //Once user lets go throw dice
+    void OnMouseUp()
+    {
+        rb.useGravity = true;
+        hasFallen = true;
+    }
+
+    
 }

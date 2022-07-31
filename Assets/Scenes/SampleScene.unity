@@ -1088,4 +1088,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   offsetCamera: 10
+  followSpeed: 5
   hasFallen: 0
