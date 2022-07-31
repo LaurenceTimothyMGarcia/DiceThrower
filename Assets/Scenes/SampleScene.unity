@@ -1148,4 +1148,5 @@ MonoBehaviour:
   followSpeed: 5
   throwMaxSpeed: 20
   flickSpeed: 20
+  curveStrength: 2
   hasFallen: 0
