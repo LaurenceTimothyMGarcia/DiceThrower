@@ -7,11 +7,11 @@ using UnityEngine;
 public class D6Check : MonoBehaviour
 {
     Rigidbody rb;
-    [SerializeField] DiceThrow diceThrow;
 
-    public Vector3 diceVelocity;
+    [SerializeField] private DiceThrow diceThrow;
+    [SerializeField] private Transform[] diceSides;
 
-    public Transform[] diceSides;
+    [HideInInspector] public Vector3 diceVelocity;
 
     // Start is called before the first frame update
     void Start()
@@ -25,10 +25,30 @@ public class D6Check : MonoBehaviour
         diceVelocity = rb.velocity;
 
         //Checks if dice stopped rolling
-        if (diceVelocity.magnitude <= 0.001 && diceThrow.hasFallen)//needs to check also if there is no more rotation look into quaternions
+        if (diceVelocity.magnitude <= 0.001 && diceThrow.hasFallen)
         {
-            Debug.Log("Stopped lmao");
-
+            //Debug.Log("Stopped lmao");
+            CheckTopSide(diceSides);
         }
+    }
+
+    //Looks for what side of die is on top
+    private void CheckTopSide(Transform[] diceSides)
+    {
+        float highestSide = diceSides[0].position.y;
+        int topSide = 1;
+
+        //Initializing Dice Sides
+        for (int i = 0; i < diceSides.Length; i++)
+        {
+            if (highestSide < diceSides[i].position.y)
+            {
+                highestSide = diceSides[i].position.y;
+                topSide = i + 1;
+            }
+        }
+
+        //Print result here
+        Debug.Log("Rolled: " + topSide);
     }
 }

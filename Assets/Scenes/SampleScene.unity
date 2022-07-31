@@ -1067,8 +1067,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   diceThrow: {fileID: 8164078558546467161}
+  diceSides:
+  - {fileID: 1135533167}
+  - {fileID: 76831516}
+  - {fileID: 980830302}
+  - {fileID: 495853257}
+  - {fileID: 204366762}
+  - {fileID: 1813666001}
   diceVelocity: {x: 0, y: 0, z: 0}
-  diceSides: []
 --- !u!114 &8164078558546467161
 MonoBehaviour:
   m_ObjectHideFlags: 0

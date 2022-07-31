@@ -10,7 +10,7 @@ public class DiceThrow : MonoBehaviour
     public static Vector3 diceVelocity;
 
     public int offsetCamera = 500;
-    public bool hasFallen = false;  //Checks if the object as fallen
+    [HideInInspector] public bool hasFallen = false;  //Checks if the object as fallen
 
     private bool isGrabbed = false;
     private Vector3 dicePos;
