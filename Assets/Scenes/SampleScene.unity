@@ -1074,6 +1074,7 @@ MonoBehaviour:
   - {fileID: 495853257}
   - {fileID: 204366762}
   - {fileID: 1813666001}
+  diceResult: {fileID: 1721812246}
   diceVelocity: {x: 0, y: 0, z: 0}
 --- !u!114 &8164078558546467161
 MonoBehaviour:

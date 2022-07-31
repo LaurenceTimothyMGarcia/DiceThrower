@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -11,6 +12,7 @@ public class D6Check : MonoBehaviour
 
     [SerializeField] private DiceThrow diceThrow;
     [SerializeField] private Transform[] diceSides;
+    [SerializeField] TMP_Text diceResult;
 
     [HideInInspector] public Vector3 diceVelocity;
 
@@ -50,6 +52,6 @@ public class D6Check : MonoBehaviour
         }
 
         //Print result here
-        Debug.Log("Rolled: " + topSide);
+        diceResult.text = "Rolled: " + topSide;
     }
 }
