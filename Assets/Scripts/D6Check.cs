@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 /*** Following script checks for dice result ***/
 
@@ -35,8 +36,8 @@ public class D6Check : MonoBehaviour
     //Looks for what side of die is on top
     private void CheckTopSide(Transform[] diceSides)
     {
-        float highestSide = diceSides[0].position.y;
-        int topSide = 1;
+        float highestSide = diceSides[0].position.y;    //looks for which one is the highest
+        int topSide = 1;    //actual side of dice
 
         //Initializing Dice Sides
         for (int i = 0; i < diceSides.Length; i++)

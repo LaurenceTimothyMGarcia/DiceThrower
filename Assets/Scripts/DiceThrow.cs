@@ -9,11 +9,13 @@ public class DiceThrow : MonoBehaviour
     static Rigidbody rb;
     public static Vector3 diceVelocity;
 
-    public int offsetCamera = 500;
+    [SerializeField] int offsetCamera = 500;
+
     [HideInInspector] public bool hasFallen = false;  //Checks if the object as fallen
 
     private bool isGrabbed = false;
     private Vector3 dicePos;
+    private Vector3 mousePos;
 
     void Start()
     {
@@ -27,6 +29,7 @@ public class DiceThrow : MonoBehaviour
         Vector3 euler = transform.eulerAngles;
 
         diceVelocity = rb.velocity;
+        mousePos = Input.mousePosition;
         
         //get dice to idle rotate center of screen if not selected
         if (!isGrabbed)
@@ -47,8 +50,7 @@ public class DiceThrow : MonoBehaviour
             isGrabbed = true;   //Stops from rotating
 
             //Place move and shake script here
-            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-            
+            transform.position = Camera.main.ScreenToWorldPoint(new Vector3(mousePos.x, mousePos.y, offsetCamera)); //So far only goes to where the mouse is, doesnt continously travel
         }
 
         //Once user lets go throw dice
