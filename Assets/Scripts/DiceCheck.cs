@@ -6,7 +6,7 @@ using UnityEngine.UI;
 
 /*** Following script checks for dice result ***/
 
-public class D6Check : MonoBehaviour
+public class DiceCheck : MonoBehaviour
 {
     Rigidbody rb;
 
