@@ -1006,18 +1006,6 @@ PrefabInstance:
       value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 5261416463375227111, guid: 571a168f00ee7cd49bbcd54ebefdeac4, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 5261416463375227111, guid: 571a168f00ee7cd49bbcd54ebefdeac4, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 5261416463375227111, guid: 571a168f00ee7cd49bbcd54ebefdeac4, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 5261416463375227111, guid: 571a168f00ee7cd49bbcd54ebefdeac4, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
@@ -1147,6 +1135,6 @@ MonoBehaviour:
   offsetCamera: 10
   followSpeed: 5
   throwMaxSpeed: 20
-  flickSpeed: 20
+  flickSpeed: 2.5
   curveStrength: 2
   hasFallen: 0

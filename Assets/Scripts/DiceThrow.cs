@@ -84,7 +84,7 @@ public class DiceThrow : MonoBehaviour
         hasFallen = true;
 
         //add throw force here
-        rb.AddForce(new Vector3 (mouseDir.x * curveStrength, 0, flickSpeed), ForceMode.Impulse);
+        rb.AddForce(new Vector3 (mouseDir.x * curveStrength, 0, mouseDir.y * flickSpeed), ForceMode.Impulse);
     }
 
     
