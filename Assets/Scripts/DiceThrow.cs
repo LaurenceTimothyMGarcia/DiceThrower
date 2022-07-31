@@ -64,6 +64,7 @@ public class DiceThrow : MonoBehaviour
     void OnMouseUp()
     {
         rb.useGravity = true;
+        rb.velocity = new Vector3(0.001f, 0.001f, 0.001f);  //Temp fix to the issue of it rolling immediatley
         hasFallen = true;
 
         //add throw force here
