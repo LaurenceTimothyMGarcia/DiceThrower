@@ -2,9 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+/*** Following script checks for dice result ***/
+
 public class D6Check : MonoBehaviour
 {
     Rigidbody rb;
+    [SerializeField] DiceThrow diceThrow;
+
     public Vector3 diceVelocity;
 
     public Transform[] diceSides;
@@ -20,12 +24,11 @@ public class D6Check : MonoBehaviour
     {
         diceVelocity = rb.velocity;
 
-        //Debug.Log(diceVelocity);
-
         //Checks if dice stopped rolling
-        if (diceVelocity.magnitude <= 0.001)//needs to check also if there is no more rotation look into quaternions
+        if (diceVelocity.magnitude <= 0.001 && diceThrow.hasFallen)//needs to check also if there is no more rotation look into quaternions
         {
             Debug.Log("Stopped lmao");
+
         }
     }
 }

@@ -2,12 +2,15 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+/*** Following script allows for user to roll dice ***/
+
 public class DiceThrow : MonoBehaviour
 {
     static Rigidbody rb;
     public static Vector3 diceVelocity;
 
     public int offsetCamera = 500;
+    public bool hasFallen = false;  //Checks if the object as fallen
 
     private bool isGrabbed = false;
     private Vector3 dicePos;
@@ -52,6 +55,7 @@ public class DiceThrow : MonoBehaviour
         if (Input.GetKeyUp(KeyCode.Mouse0))
         {
             rb.useGravity = true;
+            hasFallen = true;
         }
 
         //dice stops moving and determines number 
