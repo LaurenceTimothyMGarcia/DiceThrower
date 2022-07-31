@@ -18,12 +18,21 @@ public class DiceThrow : MonoBehaviour
     [Header("Throwing dice Variables")]
     [SerializeField] float throwMaxSpeed = 20;
     [SerializeField] float flickSpeed = 20;
+    [SerializeField] float curveStrength = 1;
 
     [HideInInspector] public bool hasFallen = false;  //Checks if the object as fallen
 
     private bool isGrabbed = false;
     private Vector3 dicePos;
     private Vector3 mousePos;
+
+    private Vector3 mouseDir
+    {
+        get
+        {
+            return Input.mousePosition - mousePos;
+        }
+    }
 
     void Start()
     {
@@ -75,7 +84,7 @@ public class DiceThrow : MonoBehaviour
         hasFallen = true;
 
         //add throw force here
-        rb.AddForce(new Vector3 (0, 0, flickSpeed), ForceMode.Impulse);
+        rb.AddForce(new Vector3 (mouseDir.x * curveStrength, 0, flickSpeed), ForceMode.Impulse);
     }
 
     

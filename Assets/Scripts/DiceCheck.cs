@@ -30,7 +30,6 @@ public class DiceCheck : MonoBehaviour
         //Checks if dice stopped rolling
         if (diceVelocity.magnitude <= 0.00001 && diceThrow.hasFallen)
         {
-            //Debug.Log("Stopped lmao");
             CheckTopSide(diceSides);
         }
     }
