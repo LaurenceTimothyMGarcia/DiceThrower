@@ -9,8 +9,15 @@ public class DiceThrow : MonoBehaviour
     static Rigidbody rb;
     public static Vector3 diceVelocity;
 
+    [Header("Dice from camera")]
     [SerializeField] int offsetCamera = 500;
+
+    [Header("Delay in dice following mouse")]
     [SerializeField] float followSpeed;
+
+    [Header("Throwing dice Variables")]
+    [SerializeField] float throwMaxSpeed = 20;
+    [SerializeField] float flickSpeed = 20;
 
     [HideInInspector] public bool hasFallen = false;  //Checks if the object as fallen
 
@@ -68,7 +75,7 @@ public class DiceThrow : MonoBehaviour
         hasFallen = true;
 
         //add throw force here
-        
+        rb.AddForce(new Vector3 (0, 0, flickSpeed), ForceMode.Impulse);
     }
 
     
