@@ -26,7 +26,7 @@ public class D6Check : MonoBehaviour
         diceVelocity = rb.velocity;
 
         //Checks if dice stopped rolling
-        if (diceVelocity.magnitude <= 0.001 && diceThrow.hasFallen)
+        if (diceVelocity.magnitude <= 0.00001 && diceThrow.hasFallen)
         {
             //Debug.Log("Stopped lmao");
             CheckTopSide(diceSides);

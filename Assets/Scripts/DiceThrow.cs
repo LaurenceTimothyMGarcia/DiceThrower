@@ -53,7 +53,11 @@ public class DiceThrow : MonoBehaviour
 
     void OnMouseDrag()
     {
+        //Dice follows mouse, gives delay in follow speed
         transform.position = Vector3.Lerp(transform.position, Camera.main.ScreenToWorldPoint(new Vector3(mousePos.x, mousePos.y, offsetCamera)), followSpeed/100);
+
+        //add rotation while moving dice here
+
     }
 
     //Once user lets go throw dice
@@ -61,6 +65,9 @@ public class DiceThrow : MonoBehaviour
     {
         rb.useGravity = true;
         hasFallen = true;
+
+        //add throw force here
+        
     }
 
     
