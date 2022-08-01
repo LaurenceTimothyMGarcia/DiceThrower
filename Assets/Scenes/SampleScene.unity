@@ -1133,6 +1133,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   diceText: {fileID: 1721812246}
+  idleX: 120
+  idleY: 180
+  idleZ: 135
   offsetCamera: 10
   followSpeed: 5
   throwMaxSpeed: 20

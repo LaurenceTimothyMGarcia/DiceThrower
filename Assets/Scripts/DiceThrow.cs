@@ -14,6 +14,11 @@ public class DiceThrow : MonoBehaviour
     [Header("Text")]
     [SerializeField] TMP_Text diceText;
 
+    [Header("Speed of Dice Rotation")]
+    [SerializeField] private float idleX;
+    [SerializeField] private float idleY;
+    [SerializeField] private float idleZ;
+
     [Header("Dice from camera")]
     [SerializeField] int offsetCamera = 500;
 
@@ -30,6 +35,10 @@ public class DiceThrow : MonoBehaviour
     private bool isGrabbed = false;
     private Vector3 dicePos;
     private Vector3 mousePos;
+    private Vector3 euler;
+    private Quaternion diceRot;
+
+    private float timeCount = 0.0f;
 
     private Vector3 mouseDir
     {
@@ -44,12 +53,11 @@ public class DiceThrow : MonoBehaviour
         rb = GetComponent<Rigidbody>();
         rb.useGravity = false;
         dicePos = Camera.main.WorldToScreenPoint(transform.position);
+        //prevDiceRot = transform.rotation;
     }
 
     void Update()
     {
-        Vector3 euler = transform.eulerAngles;
-
         diceVelocity = rb.velocity;
         mousePos = Input.mousePosition;
         
@@ -58,11 +66,15 @@ public class DiceThrow : MonoBehaviour
         {
             //Centers camera to screen
             transform.position = Camera.main.ScreenToWorldPoint(new Vector3(Screen.width/2, Screen.height/2, offsetCamera));
+        }
+    }
 
-            //Rotates dice / issue with dice rotation too fast
-            euler.x = Random.Range(0, 360f);
-            euler.z = Random.Range(0, 360f);
-            transform.eulerAngles = euler;
+    void FixedUpdate()
+    {
+        if (!isGrabbed)
+        {
+            //Rotates dice when idle
+            transform.Rotate(idleX * Time.deltaTime, idleY * Time.deltaTime, idleZ * Time.deltaTime);
         }
     }
 
@@ -82,7 +94,12 @@ public class DiceThrow : MonoBehaviour
         transform.position = Vector3.Lerp(transform.position, Camera.main.ScreenToWorldPoint(new Vector3(mousePos.x, mousePos.y, offsetCamera)), followSpeed/100);
 
         //add rotation while moving dice here
+        //transform.eulerAngles = new Vector3(0, mouseDir.x * 10, mouseDir.y * 10);
 
+        /*if (mouseDir.x > 0)
+        {
+            
+        }*/
     }
 
     //Once user lets go throw dice
