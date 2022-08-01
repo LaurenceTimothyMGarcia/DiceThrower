@@ -83,6 +83,7 @@ public class DiceThrow : MonoBehaviour
     {
         rb.useGravity = false;  //Removes gravity
         isGrabbed = true;   //Stops from rotating
+        hasFallen = false;
 
         //Setting text
         diceText.text = "Rolling Dice...";
@@ -94,12 +95,7 @@ public class DiceThrow : MonoBehaviour
         transform.position = Vector3.Lerp(transform.position, Camera.main.ScreenToWorldPoint(new Vector3(mousePos.x, mousePos.y, offsetCamera)), followSpeed/100);
 
         //add rotation while moving dice here
-        //transform.eulerAngles = new Vector3(0, mouseDir.x * 10, mouseDir.y * 10);
-
-        /*if (mouseDir.x > 0)
-        {
-            
-        }*/
+        transform.Rotate(mouseDir.y, mouseDir.x, 0, Space.World);
     }
 
     //Once user lets go throw dice
