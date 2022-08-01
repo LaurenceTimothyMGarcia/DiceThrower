@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 /*** Following script allows for user to roll dice ***/
 
@@ -8,6 +10,9 @@ public class DiceThrow : MonoBehaviour
 {
     static Rigidbody rb;
     public static Vector3 diceVelocity;
+
+    [Header("Text")]
+    [SerializeField] TMP_Text diceText;
 
     [Header("Dice from camera")]
     [SerializeField] int offsetCamera = 500;
@@ -64,7 +69,11 @@ public class DiceThrow : MonoBehaviour
     //user can click on die to move it and shake it
     void OnMouseDown()
     {
+        rb.useGravity = false;  //Removes gravity
         isGrabbed = true;   //Stops from rotating
+
+        //Setting text
+        diceText.text = "Rolling Dice...";
     }
 
     void OnMouseDrag()

@@ -1132,6 +1132,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 81127a71ed269ec4492057de061b1bd3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  diceText: {fileID: 1721812246}
   offsetCamera: 10
   followSpeed: 5
   throwMaxSpeed: 20
