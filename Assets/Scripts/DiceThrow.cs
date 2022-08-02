@@ -53,7 +53,6 @@ public class DiceThrow : MonoBehaviour
         rb = GetComponent<Rigidbody>();
         rb.useGravity = false;
         dicePos = Camera.main.WorldToScreenPoint(transform.position);
-        //prevDiceRot = transform.rotation;
     }
 
     void Update()
