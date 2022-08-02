@@ -704,6 +704,14 @@ PrefabInstance:
       propertyPath: diceText
       value: 
       objectReference: {fileID: 1721812246}
+    - target: {fileID: 8809760636885105270, guid: b40b0c201f081ce4c99d6031a42c3315, type: 3}
+      propertyPath: flickSpeed
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8809760636885105270, guid: b40b0c201f081ce4c99d6031a42c3315, type: 3}
+      propertyPath: followSpeed
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 8809760636885105271, guid: b40b0c201f081ce4c99d6031a42c3315, type: 3}
       propertyPath: diceResult
       value: 

@@ -94,7 +94,7 @@ public class DiceThrow : MonoBehaviour
         transform.position = Vector3.Lerp(transform.position, Camera.main.ScreenToWorldPoint(new Vector3(mousePos.x, mousePos.y, offsetCamera)), followSpeed/100);
 
         //add rotation while moving dice here
-        transform.Rotate(mouseDir.y, mouseDir.x, 0, Space.World);
+        transform.Rotate(mouseDir.y, mouseDir.x, 0, Space.World);   //bounds dice to rotate a specific way
     }
 
     //Once user lets go throw dice
@@ -104,8 +104,11 @@ public class DiceThrow : MonoBehaviour
         rb.velocity = new Vector3(0.001f, 0.001f, 0.001f);  //Temp fix to the issue of it rolling immediatley
         hasFallen = true;
 
-        //add throw force here
+        //Throw force, controlled by flick speed and can turn depending on curve strength
         rb.AddForce(new Vector3 (mouseDir.x * curveStrength, 0, mouseDir.y * flickSpeed), ForceMode.Impulse);
+
+        //Try to keep rotation after flicking dice
+        
     }
 
     
