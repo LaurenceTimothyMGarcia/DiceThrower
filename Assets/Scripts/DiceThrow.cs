@@ -53,6 +53,9 @@ public class DiceThrow : MonoBehaviour
         rb = GetComponent<Rigidbody>();
         rb.useGravity = false;
         dicePos = Camera.main.WorldToScreenPoint(transform.position);
+
+        //Set a random dice rotation before the player rolls
+        transform.rotation = new Quaternion(Random.Range(0, 360), Random.Range(0, 360), Random.Range(0, 360), 1);
     }
 
     void Update()
