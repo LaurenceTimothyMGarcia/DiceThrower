@@ -20,14 +20,14 @@ public class DiceThrow : MonoBehaviour
     [SerializeField] private float idleZ;
 
     [Header("Dice from camera")]
-    [SerializeField] int offsetCamera = 500;
+    [SerializeField] int offsetCamera = 10;
 
     [Header("Delay in dice following mouse")]
-    [SerializeField] float followSpeed;
+    [SerializeField] float followSpeed = 5;
 
     [Header("Throwing dice Variables")]
     [SerializeField] float throwMaxSpeed = 20;
-    [SerializeField] float flickSpeed = 20;
+    [SerializeField] float flickSpeed = 3;
     [SerializeField] float curveStrength = 1;
 
     [HideInInspector] public bool hasFallen = false;  //Checks if the object as fallen
