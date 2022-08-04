@@ -136,7 +136,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4111306923659178507, guid: c2a57189ee19718429a8c367df42fb34, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4111306923659178550, guid: c2a57189ee19718429a8c367df42fb34, type: 3}
       propertyPath: diceResult
@@ -548,6 +548,10 @@ PrefabInstance:
     - target: {fileID: 5627357282611941112, guid: 296cf07b7b538c943845e3f595e51750, type: 3}
       propertyPath: m_Name
       value: StandardD20
+      objectReference: {fileID: 0}
+    - target: {fileID: 5627357282611941112, guid: 296cf07b7b538c943845e3f595e51750, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5627357282611941115, guid: 296cf07b7b538c943845e3f595e51750, type: 3}
       propertyPath: diceResult
