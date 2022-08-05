@@ -174,6 +174,7 @@ MonoBehaviour:
   D100: {fileID: 8645519935256602770, guid: 49e2dbe4fa5a7ec48a7b4afa4908f325, type: 3}
   D12: {fileID: 864091815617757861, guid: d345dcbd9172d9542a09ee97a94960c9, type: 3}
   D20: {fileID: 5627357282611941112, guid: 296cf07b7b538c943845e3f595e51750, type: 3}
+  canvasElement: {fileID: 554381258}
 --- !u!1001 &554381257
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -271,6 +272,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c6b63c959edeba947ae49bc9838057c0, type: 3}
+--- !u!223 &554381258 stripped
+Canvas:
+  m_CorrespondingSourceObject: {fileID: 7644708602426001849, guid: c6b63c959edeba947ae49bc9838057c0, type: 3}
+  m_PrefabInstance: {fileID: 554381257}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &926911601
 GameObject:
   m_ObjectHideFlags: 0

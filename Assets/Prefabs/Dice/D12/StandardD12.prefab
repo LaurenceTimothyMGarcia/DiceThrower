@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: 864091815617757856}
   m_Layer: 0
   m_Name: StandardD12
-  m_TagString: Untagged
+  m_TagString: Dice
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -152,6 +152,7 @@ MonoBehaviour:
   flickSpeed: 3
   curveStrength: 1
   hasFallen: 0
+  dicePos: {x: 0, y: 0, z: 0}
 --- !u!114 &864091815617757856
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -165,6 +166,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   diceThrow: {fileID: 864091815617757857}
+  isD10: 0
+  isD100: 0
   diceSides:
   - {fileID: 8961753554546669935}
   - {fileID: 8961753554413865705}

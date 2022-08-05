@@ -327,7 +327,7 @@ GameObject:
   - component: {fileID: 2421263903061902055}
   m_Layer: 0
   m_Name: StandardD100
-  m_TagString: Untagged
+  m_TagString: Dice
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -460,6 +460,7 @@ MonoBehaviour:
   flickSpeed: 3
   curveStrength: 1
   hasFallen: 0
+  dicePos: {x: 0, y: 0, z: 0}
 --- !u!114 &2421263903061902055
 MonoBehaviour:
   m_ObjectHideFlags: 0
