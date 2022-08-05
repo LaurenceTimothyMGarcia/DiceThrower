@@ -11,6 +11,8 @@ public class DiceCheck : MonoBehaviour
     Rigidbody rb;
 
     [SerializeField] private DiceThrow diceThrow;
+    [SerializeField] private bool isD10;
+    [SerializeField] private bool isD100;
     [SerializeField] private Transform[] diceSides;
     [SerializeField] TMP_Text diceResult;
 
@@ -48,6 +50,13 @@ public class DiceCheck : MonoBehaviour
                 highestSide = diceSides[i].position.y;
                 topSide = i + 1;
             }
+        }
+
+        //Makes D10 Score multiple of 10
+        if (isD100)
+        {
+            topSide -= 1;
+            topSide *= 10;
         }
 
         //Print result here
