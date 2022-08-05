@@ -188,7 +188,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8645519935256602770, guid: 49e2dbe4fa5a7ec48a7b4afa4908f325, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 49e2dbe4fa5a7ec48a7b4afa4908f325, type: 3}
@@ -689,7 +689,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5627357282611941112, guid: 296cf07b7b538c943845e3f595e51750, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5627357282611941115, guid: 296cf07b7b538c943845e3f595e51750, type: 3}
       propertyPath: diceResult
