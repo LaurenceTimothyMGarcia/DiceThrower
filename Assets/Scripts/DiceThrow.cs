@@ -31,14 +31,12 @@ public class DiceThrow : MonoBehaviour
     [SerializeField] float curveStrength = 1;
 
     [HideInInspector] public bool hasFallen = false;  //Checks if the object as fallen
+    [HideInInspector] public Vector3 dicePos;
 
     private bool isGrabbed = false;
-    private Vector3 dicePos;
     private Vector3 mousePos;
     private Vector3 euler;
     private Quaternion diceRot;
-
-    private float timeCount = 0.0f;
 
     private Vector3 mouseDir
     {
