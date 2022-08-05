@@ -16,7 +16,19 @@ public class DiceSwap : MonoBehaviour
     [SerializeField] private GameObject D12;
     [SerializeField] private GameObject D20;
 
+    [Header("Button Elements")]
+    [SerializeField] private Canvas canvasElement;
+
+    private GameObject[] activeDice;
     private DiceThrow dThrow;
+
+    private bool activeD4;
+    private bool activeD6;
+    private bool activeD8;
+    private bool activeD10;
+    private bool activeD100;
+    private bool activeD12;
+    private bool activeD20;
 
 
     // Start is called before the first frame update
