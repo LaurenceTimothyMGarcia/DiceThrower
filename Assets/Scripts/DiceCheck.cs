@@ -15,6 +15,7 @@ public class DiceCheck : MonoBehaviour
     [SerializeField] private bool isD100;
     [SerializeField] private Transform[] diceSides;
     [SerializeField] TMP_Text diceResult;
+    private Canvas canvasUI;
 
     [HideInInspector] public Vector3 diceVelocity;
 
@@ -22,6 +23,10 @@ public class DiceCheck : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody>();
+
+        //Can get rid of this later
+        canvasUI = FindObjectOfType<Canvas>();
+        diceResult = canvasUI.GetComponentInChildren<TextMeshPro>();
     }
 
     // Update is called once per frame
